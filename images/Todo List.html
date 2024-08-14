@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5002/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./Todo List_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Todo List_files/styles.css">
+    <title>Todo List</title>
+</head>
+<body>
+
+    <div class="conatiner">
+        <div class="row justify-content-center align-items-center main-row">
+            <div class="col shadow main-col bg-white">
+                <div class="row bg-success text-white">
+                    <h1>To-Do List</h1>
+                </div>
+                    <form action="http://127.0.0.1:5002/add" method="POST">
+                        <div class="input-group mb-3 w-50 p-3">
+                            <input class="form-control" type="text" name="todo" placeholder="할일을 입력하세요">
+                            <div class="input-group-append">
+                                <button class="btn btn-success" type="submit">Add</button>
+                            </div>
+                        </div>
+                    </form>
+            
+                    
+                    <ul>
+                        
+                            <li>
+                                 사이드 프로젝트
+                                <form action="http://127.0.0.1:5002/delete/0" method="post" style="display:inline;">
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </li>
+                        
+
+                    </ul>
+            
+            </div>
+        </div>
+    </div>
+
+    <script src="./Todo List_files/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+</body></html>
