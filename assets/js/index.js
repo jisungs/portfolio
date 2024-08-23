@@ -26,13 +26,15 @@ const geo = new THREE.IcosahedronGeometry(1.0, 2);
 const mat = new THREE.MeshStandardMaterial({
     color: 0xffffff,
     flatShading: true,
+    transparent: true, // 투명도 설정
+    opacity: 0.5,      // 투명도 조절 (0: 완전히 투명, 1: 불투명)
 });
 const mesh = new THREE.Mesh(geo, mat);
 scene.add(mesh);
 
 //오브젝트에 선 추가 
 const wireMat = new THREE.MeshBasicMaterial({
-    color: 0xffffff,
+    color: 0x000000,
     wireframe:true,
 })
 const wireMesh = new THREE.Mesh(geo, wireMat);
