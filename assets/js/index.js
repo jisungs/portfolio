@@ -30,6 +30,19 @@ const mat = new THREE.MeshStandardMaterial({
 const mesh = new THREE.Mesh(geo, mat);
 scene.add(mesh);
 
+//오브젝트에 선 추가 
+const wireMat = new THREE.MeshBasicMaterial({
+    color: 0xffffff,
+    wireframe:true,
+})
+const wireMesh = new THREE.Mesh(geo, wireMat);
+wireMesh.scale.setScalar(1.001);//선의 크기 증가
+mesh.add(wireMesh); //구체에 선 추가 
+
+//빛 추가 
+const hemiLight = new THREE.HemisphereLight(0x0099ff, 0xaa5500)
+scene.add(hemiLight);
+
 // 윈도우 리사이즈에 따른 처리
 function onWindowResize() {
     camera.aspect = container.clientWidth / container.clientHeight;
@@ -44,7 +57,8 @@ onWindowResize();
 // 애니메이션 루프
 function animate() {
     requestAnimationFrame(animate);
-
+    mesh.rotation.x += 0.01;
+    mesh.rotation.y += 0.01;
     controls.update();
     renderer.render(scene, camera);
 }
