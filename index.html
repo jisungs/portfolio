@@ -7,6 +7,14 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+					"jsm/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+				}
+			}
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -41,8 +49,11 @@
 		<!-- Work -->
 			<article id="work" class="wrapper style2">
 				<div class="container">
+					<!-- 3D 객체가 삽입될 요소 -->
+					<div id="threejs-container" style="width: 100%; height: 400px;"></div>
+
 					<header>
-						<h2>Here's all the stuff I do.</h2>
+						<h2>저의 한걸음을 매일 쌓아 나가고 있습니다.</h2>
 						<p>저는 이런 일을 하고 있습니다.</p>
 					</header>
 					<div class="row aln-center">
@@ -69,9 +80,10 @@
 							</section>
 						</div>
 					</div>
+					 
 					<footer>
 						<p></p>
-						<a href="#portfolio" class="button large scrolly">See some of my recent work</a>
+						<a href="#portfolio" class="button large scrolly">최근 작업</a>
 					</footer>
 				</div>
 			</article>
@@ -80,8 +92,8 @@
 			<article id="portfolio" class="wrapper style3">
 				<div class="container">
 					<header>
-						<h2>Here’s some stuff I made recently.</h2>
-						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
+						<h2>제가 최근에 작업한 프로젝트 들입니다.</h2>
+						<p></p>
 					</header>
 					<div class="row">
 						<div class="col-4 col-6-medium col-12-small">

@@ -81,3 +81,5 @@ function type() {
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(type, typeSpeed);
 });
+
+
