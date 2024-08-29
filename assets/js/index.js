@@ -43,7 +43,7 @@ mesh.add(wireMesh); //구체에 선 추가
 
 
 // 스프라이트 텍스처 로드
-const spriteTexture = new THREE.TextureLoader().load('images/pic00.jpg');
+// const spriteTexture = new THREE.TextureLoader().load('images/pic00.jpg');
 
 
 // 사용할 이미지 텍스처 배열
@@ -64,7 +64,8 @@ const textures = [
 
 // 스프라이트 생성 함수
 function createSprite(position, texture) {
-    const spriteMaterial = new THREE.SpriteMaterial({ map: texture });
+    const spriteMaterial = new THREE.SpriteMaterial({ map: texture
+     });
     const sprite = new THREE.Sprite(spriteMaterial);
     sprite.position.copy(position);
     sprite.scale.set(0.1, 0.1, 0.1); // 스프라이트 크기 조절
